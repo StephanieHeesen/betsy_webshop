@@ -26,7 +26,7 @@ class User(BaseModel):
 class Products(BaseModel):
     name = peewee.CharField(index=True)
     description = peewee.CharField()
-    price_p_u = peewee.DecimalField()
+    price_p_u = peewee.DecimalField(decimal_places= 2 , auto_round= True)
     quantity = peewee.IntegerField()
 
 
